@@ -44,7 +44,7 @@ TechSolve IT's operations manager needed better visibility into support ticket p
 
 **Stack:** VS Code + GitHub Copilot (Agent mode) + Power BI Modeling MCP Server (local), connected directly to the live semantic model behind the dashboard.
 
-> Originally planned as a Microsoft Copilot Studio agent connected to a published Power BI dataset. This was blocked because of login access to the required Premium/Fabric workspace, so the project pivoted to a local MCP connection with no employer-tenant dependency.
+> Originally planned as a Microsoft Copilot Studio agent connected to a published Power BI dataset. I dont have access to the required Premium/Fabric workspace, so decided to use the local MCP connection.
 
 **How it works:** the agent queries the actual DAX measures behind the dashboard, so answers are grounded in the same validated logic — not re-derived or guessed.
 
