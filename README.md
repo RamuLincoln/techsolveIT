@@ -27,6 +27,15 @@ TechSolve IT's operations manager needed better visibility into support ticket p
 
 ## 📈 Part 2 — Dashboard Pages
 
+PageContentsOverviewKPI cards (Total Tickets, Avg Resolution Hours, SLA Breach Rate, Open Tickets, Avg First Response), category/status breakdown, SLA breach by priorityPerformance AnalysisResolution time by category & priority, Team Performance table, public holiday impactCategory & Sub-Category BreakdownMatrix drill-down of consolidated categories vs. raw sub-category labels, plus a data-quality callout cardTicket InsightsTop 10 customers by ticket volume, tickets by region, tickets by industry, tickets by channel, tickets by account manager, tickets by service areaAccount Value vs. Service PerformanceContract value vs. response/resolution/SLA metrics by top accounts, segment, and subscription tierTeam StatusMatrix of ticket status (Closed, In Progress, Open, Pending Customer, Resolved) by team and individual agent, plus Avg First Response & Avg Resolution Hour by category, broken out per team
+
+Headline finding
+
+92% of resolved tickets breach their SLA target, and this is consistent across every dimension tested — category, team, priority, region, channel, service area, customer segment, subscription tier, and public holiday timing. No single factor explains it. This points to a systemic capacity or process issue (e.g. understaffing relative to volume, no triage/escalation automation) rather than a localised one — reinforced by an average first-response time of 36.3 hours against a 4.16-hour target for Urgent tickets.
+
+One real (non-flat) finding: ticket volume is heavily skewed by team — Support handles 58,303 tickets, more than three times the next largest team (Billing, 17,913). Despite this, SLA breach and escalation rates stay flat across teams (~50%), suggesting Support may be understaffed relative to its workload even though breach rate doesn't visibly spike there — worth investigating as a staffing/capacity question rather than a performance one.
+📈 Part 2 — Dashboard Pages
+
 | Page                                      | Contents                                                                                                                                              |
 | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Overview**                              | KPI cards (Total Tickets, Avg Resolution Hours, SLA Breach Rate, Open Tickets, Avg First Response), category/status breakdown, SLA breach by priority |
