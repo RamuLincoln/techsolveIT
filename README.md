@@ -55,7 +55,7 @@ TechSolve IT's operations manager needed better visibility into support ticket p
 | Avg Resolution Hour                              | 120.72         | 120.72         | ✅    |
 | SLA Breach Rate (after supplying business logic) | 92%            | 92%            | ✅    |
 
-The agent also produced a fluent but unsupported causal claim (Urgent tickets breaching at 98.57%, breaches "concentrated" in specific teams) that contradicted the dashboard's validated, flat breach-rate pattern — later disproven independently by Power BI's own Key Influencers visual.
+The agent also produced a fluent but unsupported causal claim (Urgent tickets breaching at 98.57%, breaches "concentrated" in specific teams) that contradicted the dashboard's validated, flat breach-rate pattern.
 
 🎥 A screen recording (screen_recording.mp4) is included showing a live walkthrough of the dashboard and a real-time Copilot Chat Q&A session against the connected semantic model, including examples of both correct and incorrect agent responses.
 
