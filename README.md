@@ -7,7 +7,7 @@ An end-to-end Power BI project analysing support ticket performance for TechSolv
 TechSolve IT's operations manager needed better visibility into support ticket performance: what issues are being raised, how they're handled, and where there's room to improve. This project delivers:
 
 1. **Cleaned, consolidated ticket data** combined with an external NZ Public Holidays dataset
-2. **A 6-page Power BI dashboard** covering overview KPIs, root-cause analysis, category breakdowns, customer/regional insights, and account-value analysis
+2. **A 6-page Power BI dashboard** covering overview KPIs, resolution time, category breakdowns, team status, tickets and service performance analysis
 3. **An AI agent** (VS Code + GitHub Copilot + local Power BI MCP Server) that answers natural language questions directly against the live semantic model
 
 ## 🗂️ Part 1 — Data Source, Combine & Prepare
