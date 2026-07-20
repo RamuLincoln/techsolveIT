@@ -17,6 +17,7 @@ TechSolve IT's operations manager needed better visibility into support ticket p
 **External data source:** NZ Public Holidays — joined on ticket creation date to test whether holiday timing affects resolution speed.
 
 **Key cleaning steps:**
+
 - Replaced blanks with meaningful defaults (e.g. `company_name` → "Residential Customer", `csat_score` left as Null rather than 0)
 - Standardised and consolidated the `category` field (TRIM/Clean/Capitalize, then merged near-duplicate labels like "Bug"/"Bug Report" into 10 clean categories) while preserving raw sub-category values for transparency
 - Removed PII (`customer_email`, `billing_contact_email`); retained free-text fields (`issue_description`, `resolution_notes`) for AI agent use
@@ -26,16 +27,17 @@ TechSolve IT's operations manager needed better visibility into support ticket p
 
 ## 📈 Part 2 — Dashboard Pages
 
-| Page | Contents |
-|---|---|
-| **Overview** | KPI cards (Total Tickets, Avg Resolution Hours, SLA Breach Rate, Open Tickets, Avg First Response), category/status breakdown, SLA breach by priority |
-| **Performance Analysis** | Resolution time by category & priority, Team Performance table, public holiday impact |
-| **Category & Sub-Category Breakdown** | Matrix drill-down of consolidated categories vs. raw sub-category labels, plus a data-quality callout card |
-| **Customer & Regional Insights** | Top 10 customers, tickets by region, tickets by channel, tickets by service area |
-| **Account Value vs. Service Performance** | Contract value vs. response/resolution/SLA metrics by top accounts, segment, and subscription tier |
-| **SLA Breach — Key Influencers** | Built-in Power BI Key Influencers + Smart Narrative, used as an independent check on manual findings |
+| Page                                      | Contents                                                                                                                                              |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Overview**                              | KPI cards (Total Tickets, Avg Resolution Hours, SLA Breach Rate, Open Tickets, Avg First Response), category/status breakdown, SLA breach by priority |
+| **Performance Analysis**                  | Resolution time by category & priority, Team Performance table, public holiday impact                                                                 |
+| **Category & Sub-Category Breakdown**     | Matrix drill-down of consolidated categories vs. raw sub-category labels, plus a data-quality callout card                                            |
+| **Customer & Regional Insights**          | Top 10 customers, tickets by region, tickets by channel, tickets by service area                                                                      |
+| **Account Value vs. Service Performance** | Contract value vs. response/resolution/SLA metrics by top accounts, segment, and subscription tier                                                    |
+| **SLA Breach — Key Influencers**          | Built-in Power BI Key Influencers + Smart Narrative, used as an independent check on manual findings                                                  |
 
 ### Headline finding
+
 **92% of resolved tickets breach their SLA target**, and this is consistent across every dimension tested — category, team, priority, region, channel, service area, customer segment, subscription tier, and public holiday timing. No single factor explains it; This points to a **systemic capacity or process issue** (e.g. understaffing relative to volume, no triage/escalation automation) rather than a localised one — reinforced by an average first-response time of 36.3 hours against a 4.16-hour target for Urgent tickets.
 
 ## 🤖 Part 3 — AI Agent
@@ -48,12 +50,14 @@ TechSolve IT's operations manager needed better visibility into support ticket p
 
 **Testing approach:** every agent response was cross-checked against Power BI Desktop and the raw Excel export before being trusted. Results were mixed:
 
-| Metric | Verified value | Agent's answer | Match |
-|---|---|---|---|
-| Avg Resolution Hour | 120.72 | 120.72 | ✅ |
-| SLA Breach Rate (after supplying business logic) | 92% | 92% | ✅ |
+| Metric                                           | Verified value | Agent's answer | Match |
+| ------------------------------------------------ | -------------- | -------------- | ----- |
+| Avg Resolution Hour                              | 120.72         | 120.72         | ✅    |
+| SLA Breach Rate (after supplying business logic) | 92%            | 92%            | ✅    |
 
 The agent also produced a fluent but unsupported causal claim (Urgent tickets breaching at 98.57%, breaches "concentrated" in specific teams) that contradicted the dashboard's validated, flat breach-rate pattern — later disproven independently by Power BI's own Key Influencers visual.
+
+🎥 A screen recording (screen_recording.mp4) is included showing a live walkthrough of the dashboard and a real-time Copilot Chat Q&A session against the connected semantic model, including examples of both correct and incorrect agent responses.
 
 ## 🛠️ Tools Used
 
@@ -61,6 +65,10 @@ The agent also produced a fluent but unsupported causal claim (Urgent tickets br
 - **Power Query** — cleaning and transformation
 - **VS Code + GitHub Copilot (Agent mode)** — Part 3 AI agent interface
 - **Power BI Modeling MCP Server (local)** — connects the agent to the live semantic model
+
+## 📄 Full Written Review
+
+See TechSolve_Written_Review.docx for the complete write-up: dataset sourcing rationale, process walkthrough, tool choices, challenges, time breakdown, AI tool usage, and assumptions made throughout the project.
 
 ## ▶️ How to Open
 
